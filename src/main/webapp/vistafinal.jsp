@@ -24,7 +24,7 @@
                     <div class="col-md-9">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Ciudades de diferentes países</h4>
+                                <h4>Ciudades de diferentes paÃ­ses</h4>
                             </div>
                             <table class="table table-striped">
                                 <thead class="thead-dark">
@@ -32,12 +32,12 @@
                                     <th scope="col">ID</th>
                                     <th scope="col">Nombre</th>
                                     <th scope="col">Distrito</th>
-                                    <th scope="col">Población</th>
+                                    <th scope="col">PoblaciÃ³n</th>
                                     <th></th>
                                 </tr>
                                 </thead> 
                                 <tbody>
-                                <c:forEach items="${requestScope.listadoCiudades}" var="ciudad">
+                                <c:forEach items="${requestScope.lista}" var="ciudad">
                                     <tr>
                                         <td>${ciudad.id}</td>
                                         <td>${ciudad.name}</td>
