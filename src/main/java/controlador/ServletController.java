@@ -23,11 +23,14 @@ public class ServletController extends HttpServlet {
         DaoCiudad dao = new DaoCiudad();
         String operacion = request.getParameter("operacion");
         switch (operacion) {
-            case "listarCiudades":
+            case "listaCiudades":
                 
-                try {
-                    List<Ciudad>listadoCiudades=dao.listarCiudades();
-                    request.setAttribute("listadoCiudades", listadoCiudades);
+               try {
+                //Obtenemos el método obtenerCiudades de DaoCiudades
+                    List<Ciudad>lista=dao.obtenerCiudades();
+                    request.setAttribute("lista", lista);
+
+                //El controlador nos llevará a la pagina vistafinal.jsp
                     request.getRequestDispatcher("vistafinal.jsp").forward(request, response);
                     //System.out.println("JSP pintado");
                 } catch (SQLException sqle) {
