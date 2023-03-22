@@ -9,6 +9,6 @@
     </head>
     <body>
         
-        <a href="${pageContext.request.contextPath}/ServletController?operacion=listarCiudades">Listado ciudades</a></li> 
+        <a href="${pageContext.request.contextPath}/ServletController?operacion=listaCiudades">Listado ciudades</a></li> 
     </body>
 </html>
