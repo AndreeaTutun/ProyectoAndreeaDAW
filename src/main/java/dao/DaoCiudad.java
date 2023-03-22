@@ -20,7 +20,7 @@ public class DaoCiudad {
         
     }
     
-    public List<Ciudad> listarCiudades() throws SQLException, Exception {
+    public List<Ciudad> obtenerCiudades() throws SQLException, Exception {
          Conexion conexion = new Conexion(); //Creamos un objeto conexion
 	Connection con = null;
         Statement s = null;
@@ -37,9 +37,9 @@ public class DaoCiudad {
 
             /*
             Para cada fila resultante proporcionada por el objeto ResultSet, 
-            se debe crear un autor que coincida con los atributos del autor.
+            se debe crear un autor que coincida con los atributos de la ciudad.
             con los datos correspondientes del ResultSet.
-            Después de cada iteración, el autor se agrega a la lista.*/
+            Después de cada iteración, la ciudad se agrega a la lista.*/
             while (rs.next()) {
                 Ciudad miciudad = new Ciudad();
                 miciudad.setId(rs.getInt("ID"));
